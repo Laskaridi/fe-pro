@@ -6,7 +6,11 @@ alert(`Number1 and number2: ${number1==number2}`);
 
 let widthRest = 47, hightRest = 24;
 console.log(`Area of a restangle: ${widthRest*hightRest}`);
-console.log(`Perimeter of a ristangle: ${(widthRest+hightRest)*2}`);
+
+let widthRest2 = Number(prompt('Enter a width'));
+let hightRest2 = Number(prompt('Enter a hight'));
+alert(`Perimeter of a restangle: ${2*(widthRest2+hightRest2)}sm`);
+console.log(`Perimeter of a restangle: ${2*(widthRest2+hightRest2)}sm`);
 
 
 let tempC = 25;
