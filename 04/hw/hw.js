@@ -80,7 +80,7 @@ function summArray(value){
     for(let i = 0; i < arraySumm.length; i++){
         summ += value[i];
     }
-    console.log(summ);
+    console.log(`Сума чисел: ${summ}`);
 }
 summArray(arraySumm);
 
