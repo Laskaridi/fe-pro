@@ -30,10 +30,27 @@ let funnyDucks1 = 65, funnyDucks2 = 54, funnyDucks3 = 49;
 let crazyKats, funnyDucks;
 console.log(crazyKats = (crazyKats1 + crazyKats2 + crazyKats3)/3);
 console.log(funnyDucks = (funnyDucks1 + funnyDucks2 + funnyDucks3)/3);
-let sum5;
-if(crazyKats/funnyDucks){
-    console.log(sum5 = crazyKats);
+if(crazyKats == funnyDucks*2){
+    console.log(`Winner: CrazyKats`);
+}
+else if(funnyDucks == crazyKats*2){
+    console.log('Winner: FunnyDucks');
 }
 else {
-    console.log(sum5 = funnyDucks);
+    console.log('Winner: Nobody');
+}
+
+let crazyKats11 = 85, crazyKats22 = 54, crazyKats33 = 41;
+let funnyDucks11 = 23, funnyDucks22 = 34, funnyDucks33 = 27;
+let crazyKats12, funnyDucks12;
+console.log(crazyKats12 = (crazyKats11 + crazyKats22 + crazyKats33)/3);
+console.log(funnyDucks12 = (funnyDucks11 + funnyDucks22 + funnyDucks33)/3);
+if(crazyKats12 >= funnyDucks12*2){
+    console.log(`Winner: CrazyKats`);
+}
+else if(funnyDucks12 >= crazyKats12*2){
+    console.log('Winner: FunnyDucks');
+}
+else {
+    console.log('Winner: Nobody');
 }
