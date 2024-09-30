@@ -1,19 +1,15 @@
 //№1
 let arrayUsers = ['Robert', 'Stiven', 'Monica', 'Liana', 'Tom'];
 
-function  wellcomUse(){
-    console.log(arrayUsers);
+function  wellcomUsers(array, callback){
+    for(let i = 0; i< array.length; i++)
+    callback(array[i]);
 }
-wellcomUse(arrayUsers);
 
-function hiUser(){
-    console.log(`Вітаю ${arrayUsers[0]}`);
-    console.log(`Вітаю ${arrayUsers[1]}`);
-    console.log(`Вітаю ${arrayUsers[2]}`);
-    console.log(`Вітаю ${arrayUsers[3]}`);
-    console.log(`Вітаю ${arrayUsers[4]}`);
+function hiUser(user){ 
+    console.log(`Вітаю ${user}`);
 }
-hiUser(arrayUsers);
+wellcomUsers(arrayUsers, hiUser);
 
 
 //№2
@@ -29,17 +25,22 @@ defaultValue();
 // const multiplyValues = (a, b, c) => a * b * c;
 function multiplyValues(a, b, c){
     let summMulti = a * b * c;
+    console.log(summMulti);
+    return summMulti;
 }
 
 
 
 //№4
 let array = [];
-array[0] = 0;
-array[1] = 2;
-array[2] = 4;
-array[3] = 6;
-array[4] = 8;
+// array[0] = 0;
+// array[1] = 2;
+// array[2] = 4;
+// array[3] = 6;
+// array[4] = 8;
+for(let i = 0; i <=8; i += 2){
+    array[array.length] = i;
+}
 console.log(array);
 
 
@@ -49,13 +50,14 @@ console.log(array);
 let days = ["Понеділок", "Середа", "Неділя"];
 let plans = ["Урок 03", "Урок 04", "Вихідний"];
 
-    for(let index1 = 0; index1 < days.length; index1++){
-        for(let index2 = 0; index2 < plans.length; index2++){
-            console.log(`Сьогодні ${days[index1]}, у вас такі плани: ${plans[index2]}`);
-            break;
-        }
+if(days.length === plans.length){
+    for(let i = 0; i < days.length; i++){
+        console.log(`Today ${days[i]} is ${plans[i]}`);
     }
-
+}
+else{
+    console.log('schedule');
+}
 
 
 
@@ -91,11 +93,11 @@ let arrayOld = [1, 2, 3, 4];
 
 function squareArray(squareValue){
     let arrayNew = [];
-    for(let i = 0; i < arrayOld.length; i++){
+    for(let i = 0; i < squareValue.length; i++){
         let newValue = squareValue[i]**2;
-        arrayNew = arrayOld.length[i];
-        console.log(newValue);
+        arrayNew[arrayNew.length] = newValue;
     }
+    return arrayNew;
 }
-squareArray(arrayOld);
+console.log(squareArray(arrayOld));
     
