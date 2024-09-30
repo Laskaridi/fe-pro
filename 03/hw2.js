@@ -54,3 +54,5 @@ else if(funnyDucks12 >= crazyKats12*2){
 else {
     console.log('Winner: Nobody');
 }
+
+
