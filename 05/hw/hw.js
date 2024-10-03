@@ -197,9 +197,14 @@ console.log('Додаткові===================');
 //Додаткові завдання
 //№1
 let numbers = [7,65,1,2,43,29,5,7,1,29];
-
+let uniqNumbers = [];
 function numberFn(array){
- 
+        for(let i = 0; i < array.length; i++){
+                if(!uniqNumbers.includes(array[i])){
+                        uniqNumbers.push(array[i]);
+                }
+        }
+ return uniqNumbers;
 }
 console.log(numberFn(numbers));
 
@@ -221,6 +226,21 @@ function sortFn(array1, array2){
 }
 sortFn(arrayNumber1, arrayNumber2);
 
+// let firstArr = [1,2,3];
+// let secondArr = [6,7,8,9];
+// function mergeAndSort(arr1, arr2){
+//     let mergeArr = arr1.concat(arr2);
+//     mergeArr.sort((a,b)=>a-b);
+//     console.log(`mergeArr ${mergeArr}`);
+//     let resultArr = [];
+//     let stopValue = mergeArr.length-2;
+//     for(let i = 0; i<stopValue; i++){
+//         resultArr.push(mergeArr[i]);
+//     }
+
+//     console.log(resultArr);
+//     return resultArr;
+
 
 console.log('===================');
 
@@ -234,13 +254,14 @@ let users = [
    ];
 
    function filter(array){
-    array.sort((a,b)=>a.age-b.age);
     let usersNew = [];
     for(let i = 0; i < array.length; i++){   
-      if(array[i].age < 18){
-        delete array[i];
+      if(array[i].age > 18){
+        usersNew.push(array[i]);
       }   
     }
-   return array;
+    usersNew.sort((a,b)=>a.age-b.age);
+    usersNew.shift();
+   return usersNew;
    }
    console.log(filter(users));
