@@ -36,10 +36,10 @@ console.log('=====Number3=====');
 // Написати гру "Камінь, ножниці, папір"  дані користувач отримує через prompt а результат гри виводити використовуючи alert (тут треба Math.random та if) 
 
 let valueUser = prompt('Введіть слово: камінь, ножниці або папір');
-let valueGame = Math.random();
-if (valueGame <= 0.33){
+let valueGame = Math.random()*3;
+if (valueGame <= 1){
     valueGame = 'камінь';
-}else if (valueGame <= 0.64){
+}else if (valueGame <= 2){
     valueGame = 'ножниці';
 }else {
     valueGame = 'папір';
