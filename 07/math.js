@@ -23,3 +23,5 @@ console.log(Math.ceil(Math.random()*100));
 console.log(Math.ceil(Math.random()*100));
 console.log(Math.ceil(Math.random()*100));
 console.log(Math.ceil(Math.random()*100));
+
+NewDiv.style.backgroundColor=`#${Math.floor(Math.random()*16777215).toString(16)}`; //166777215-максимальна кількість кольорів в 24-бітній-палітрі
