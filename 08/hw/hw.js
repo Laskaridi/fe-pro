@@ -62,7 +62,7 @@ console.log('=====Date1=====');
 
 
 //Створіть функцію, яка повертає рік народження користувача коли користувач вводить свій вік
-let todayDate = new Date(2024, 9);
+let todayDate = 2024;
 
 function ageUserFn(date){
     let ageUser = Number(prompt('Введіть ваш вік'));
