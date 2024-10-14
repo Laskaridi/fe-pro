@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        button{
+            background-color: orange;
+            display: inline-block;
+            padding: 20px;
+            color: black;
+            font-size: 20px;
+        }
+        button::before{
+            content: 'Open menu';
+        }
+        button.open{
+            background-color: green;
+            color: white;
+        }
+        button.open::before{
+            content: "Close menu";
+        }
+
+        ul{
+            display: none;
+        }
+        ul.active{
+            display: block;
+            background-color: blueviolet;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Hello js style
+    </h1>
+    <!-- <br> -->
+    <h2>
+        Hello class methods
+    </h2>
+    <!-- <br> -->
+
+    <header>
+        <nav></nav>
+    </header>
+    <a href="#" class="test"  target="_blank">Visit site</a>
+    <a href="" class="empty">No content tag</a>
+    <button>
+        Cal me
+    </button>
+    <div class="container">
+        <button class="test open">
+            
+        </button>
+        <ul class="active">
+            <li>Hello</li>
+            
+            <li class="active">Active</li>
+
+
+
+            <li>World</li>
+        </ul>
+    </div>
+    <!-- <script src="dom.js"></script> -->
+    <!-- <script src="traversing.js"></script>
+      -->
+    <script src="atributes.js"></script>
+
+</body>
+</html>
