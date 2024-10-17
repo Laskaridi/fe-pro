@@ -56,3 +56,53 @@ else {
 }
 
 
+let arrCard = [1,6,2,8,9,0,3,5,6,8,1,2,3,8,9,0];
+arrCard.fill('#', 0, 12);
+let newArrCard = arrCard.join('');
+console.log(newArrCard);
+
+
+let arrSquare = [1, 2, 3, 4];
+
+function squareFn(arrSquare){
+    let newArrSquare = [];
+    let sum = 0;
+    for(let i = 0; i < arrSquare.length; i++){
+        let squareValue = arrSquare[i]**2;
+        newArrSquare[newArrSquare.length] = squareValue;
+        sum += squareValue;
+    }
+    return sum;
+}
+console.log(squareFn(arrSquare));
+
+let arrName = 'Rizhko Anastasiia Mykolaivna';
+function initials(str) {
+    return str.split(/\s+/).map((w,i) => i ? w.substring(0,1).toUpperCase() + '.' : w).join(' ');
+  }
+console.log(initials(arrName));  
+
+
+let pinCode = '2345';
+
+function validatePin(pin){
+    let i = pin.length;
+    if(i === 4){
+        return true;
+    }
+    else if(i === 6){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+console.log(validatePin(pinCode));
+
+
+
+let init = 5;
+function initFn(init){
+    return --init;
+}
+console.log(initFn(init));
