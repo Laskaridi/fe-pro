@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mouse,
+        .move{
+            width: 250px;
+            height: 250px;
+            padding: 40px;
+            margin: 50px auto;
+            border: 2px solid black;
+        }
+        /* .mouse:hover{
+            background-color: yellow;
+        } */
+        input{
+            display: block;
+            padding: 20px;
+            background-color: lightblue;
+            border: 2px solid blue;
+            width: 250px;
+            margin: 50px auto;
+        }
+        p{
+            font-size: 20px;
+            text-align: center;
+        }
+        .scrollMaker{
+            width: 200px;
+            font-size: 30px;
+            margin: 0 auto;
+        }
+        .myBlock{
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+}
+.textBlock{
+    width: 500px;
+    height: 200px;
+    border: 2px solid black;
+}
+.contexMenu{
+    display: none;
+    position: absolute;
+    background-color: bisque;
+    padding: 0;
+    margin: 0;
+    border-radius: 10%;
+    z-index: 1000;
+
+}
+.contexMenu ul{
+    padding: 0;
+    margin: 0;
+}
+.contexMenu ul li{
+    padding: 10px 15px;
+
+}
+.contexMenu ul li:hover{
+    background-color: lightblue;
+    border-left: 2px  solid black;
+}
+    </style>
+</head>
+<body>
+    <div class="mouse">
+
+    </div>
+    <p class="scrollMaker">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam facere, explicabo quas quis corporis pariatur culpa fugit ea accusantium sunt eveniet? Quam animi et in quia neque voluptates laboriosam nemo.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat est dolores provident non quis error doloribus nisi laboriosam quam repellat, officiis obcaecati maiores voluptas iure eos quos veritatis. Tempore dolor iste praesentium quasi ipsa temporibus voluptatem dignissimos tempora fugit assumenda ipsam voluptate, obcaecati pariatur quam consequatur expedita dolore provident optio quisquam eos. Eligendi, numquam est. Iusto, rem, ullam labore quisquam praesentium exercitationem cum cupiditate a assumenda error minus? Nam pariatur iste recusandae harum consectetur accusamus cumque omnis eum accusantium maxime aliquid delectus porro eligendi distinctio totam, impedit magnam iure corrupti saepe quidem, veniam veritatis. Id dicta nostrum eius aspernatur quibusdam.
+    </p>
+    <p class="info"></p>
+    <input type="text">
+    <div class="move"></div>
+    <div class="fs-2 textBlock">
+        ♦ Енергії, використовуваної мозком, досить, щоб запалити лампочку <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightbulb-fill text-warning" viewBox="0 0 16 16">
+            <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5"/>
+          </svg> 25 ватів.
+        <div class="contexMenu">
+        <ul class="menu">
+            <li id="alignCenter">Вирівняти по центру</li>
+            <li id="alignRigth">Вирівняти по правому краю</li>
+            <li id="alignLeft">Вирівняти по лівому краю</li>
+            <li id="hideElement">Приховати елементи</li>
+        </ul>
+        </div>
+      </div>
+
+    <script src="more.js"></script>
+</body>
+</html>
