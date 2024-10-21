@@ -58,7 +58,7 @@ listBtn.style.margin = '50px 140px';
 let [...list] = document.querySelectorAll('div');
 
 list.forEach(item=>{
-    item.onclick = function removeEl(){
+    item.onclick = function (){
         this.remove();
     }
 })
