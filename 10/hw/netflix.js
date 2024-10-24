@@ -12,16 +12,45 @@ for(let element of genresArr){
 let genresStyle = document.querySelector('.genres');
 genresStyle.setAttribute('style', 'display:flex;');
 
-urlArr = ['images/video1.png', 'images/video2.png', 'images/video3.png', 'images/video4.png', 'images/video5.png']
 
-let images = document.querySelector('.images');
 
-urlArr.forEach((item) => {
-    let imageEl = document.createElement('img');
-    imageEl.setAttribute('src', item);
-    images.appendChild(imageEl);
+
+// urlArr = ['images/video1.png', 'images/video2.png', 'images/video3.png', 'images/video4.png', 'images/video5.png']
+
+// let images = document.querySelector('.images');
+
+// urlArr.forEach((item) => {
+//     let imageEl = document.createElement('img');
+//     imageEl.setAttribute('src', item);
+//     images.appendChild(imageEl);
+// });
+const slides = document.querySelector('.slides');
+const slide = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.icon1');
+const nextBtn = document.querySelector('.icon2');
+
+let currentIndex = 0;
+const totalSlides = slide.length;
+
+function showSlide(index) {
+    if (index >= totalSlides) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = totalSlides - 1;
+    } else {
+        currentIndex = index;
+    }
+
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+prevBtn.addEventListener('click', function() {
+    showSlide(currentIndex - 1);
 });
-    
+
+nextBtn.addEventListener('click', function() {
+    showSlide(currentIndex + 1);
+});
     
    
 //Date

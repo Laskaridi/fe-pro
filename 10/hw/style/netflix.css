@@ -173,13 +173,9 @@ text-align: left;
 .stars{
     display: inline-block;
 }
-
 .star{
-    font-size: 40px;
     color: white;
-    cursor: pointer;
 }
-
 .star.selected{
     color: gold;
 }
@@ -242,7 +238,7 @@ font-size: 22px;
 font-weight: 800;
 line-height: 144.52%;
 }
-.icon{
+.controls{
     width: 50%;
     display: flex;
     justify-content: flex-end;
@@ -273,17 +269,24 @@ line-height: 144.52%;
     top: 10px;
     left: 13px;
 }
-.images{
-    display: flex;
+.slider{
     width: 100%;
-    justify-content: space-between;
     padding-top: 10px;
     padding-bottom: 49px;
+    position: relative;
+    overflow: hidden;
 }
-.images img{
-    width: 15%;
+.slider img{
+    width: 145px;
+    height: 205px;
 }
-.images img:hover{
+.slider img:hover{
     color: gray;
     opacity: 0.5;
+}
+.slides {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+    transition: transform 0.5s ease-in-out;
 }
