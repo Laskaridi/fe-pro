@@ -5,6 +5,9 @@
     width: 200px;
     height: 30px;
 }
+p{
+    font-size: 18px;
+}
 #start-button{
     padding: 10px 50px;
     margin: 50px 150px 10px;
@@ -13,7 +16,7 @@
 .counter{
     margin: 0 147px;
 }
-p{
+h2{
     font-size: 40px;
 }
 .info-country{
