@@ -96,3 +96,8 @@ document.getElementById('hideElement').addEventListener('click',function(){
     textBlock.style.display='none';
 });
 });
+
+
+
+
+

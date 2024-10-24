@@ -15,48 +15,45 @@ colorEl.addEventListener('mouseout', function(e){
 
 
 //Number2
-
+let contextMenu = document.querySelector('.context-menu');
 let textBlockEl = document.querySelector('.text-block');
 
 textBlockEl.addEventListener('contextmenu', function(e){
     e.preventDefault();
-    this.innerText = `
-    Вирівняти по центру 
-    Вирівняти по правому краю 
-    Вирівняти по лівому краю 
-    Приховати елемент
-    `;
-    this.style.fontSize = '20px';
-
+    contextMenu.style.top = `${e.clientY}px`;
+    contextMenu.style.left = `${e.clientX}px`;
+    contextMenu.style.display ='block';
 });
+textBlockEl.onclick = function(){
+  contextMenu.style.display = 'none';
+}
 
-// Завдання 'keyup': Створіть ігрове поле, де користувач може переміщати 
-// об'єкт (наприклад, квадрат або коло) за допомогою клавіш стрілок. 
-// Рух об'єкта повинен зупинятися, коли клавіша відпущена
 
 //Number3
-
+let playBlock = document.querySelector('.play-block');
 let circleEl = document.querySelector('.circle');
+let posX = 0;
+let posY = 0;
+let moveStep = 4;
 
 document.addEventListener('keydown', function(e) {
-  if (e.key == ArrowUp) {
-    let goUp = circleEl.offsetTop;
-    console.log(goUp);
-    circleEl.style.top = goUp - 40 + "px";
-  }
-  if (e.key == ArrowDown) {
-    let goDown = circleEl.offsetTop
-    circleEl.style.top = goDown + 40 + "px"
-  }
-  if (e.key == ArrowLeft) {
-    let goLeft = circleEl.offsetLeft
-    circleEl.style.left = goLeft - 40 + "px"
-  }
-  if (e.key == ArrowRight) {
-    let goRight = circleEl.offsetLeft
-    circleEl.style.left = goRight + 40 + "px"
-  }
-})
+  switch(e.key){
+    case 'ArrowUp':
+        posY = Math.max(0, posY-moveStep);
+        break;
+    case 'ArrowDown':
+        posY = Math.min(playBlock.clientHeight - circleEl.clientHeight, posY+moveStep);
+        break;
+    case 'ArrowLeft':
+        posX = Math.max(0, posX-moveStep);
+        break;
+    case 'ArrowRight':
+        posX = Math.min(playBlock.clientWidth - circleEl.clientWidth, posX+moveStep);
+        break;            
+}
+circleEl.style.top = `${posY}px`;
+circleEl.style.left = `${posX}px`;
+});
 
 //Number4
 
