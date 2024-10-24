@@ -1,0 +1,20 @@
+:root{
+    --body-bg:gray;
+    --text-color:white;
+    --text-bg:black;
+    --title-bg:yellow;
+}
+body{
+    background-color: var(--body-bg);
+}
+p{
+    background-color: var(--text-bg);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+}
+h3{
+    background-color: var(--title-bg);
+    padding: 30px;
+    text-align: center;
+}
