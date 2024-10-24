@@ -59,6 +59,7 @@ let timerStart = document.querySelector('#timer');
 let timeRemaining = 25 * 60;
 let timer = 0;
 let isRunning = false;
+let intervalCountOut;
 
 function timeFn(item){
     let minutes = Math.floor(item/60);
@@ -72,7 +73,7 @@ function timeFn(item){
 function startCountOut(){
     if(!isRunning){
         isRunning = true;
-        let intervalCountOut = setInterval(function(){
+        intervalCountOut = setInterval(function(){
         timeRemaining--;
         timerStart.textContent = timeFn(timeRemaining);
         if(timeRemaining<=0){
