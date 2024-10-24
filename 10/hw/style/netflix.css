@@ -170,13 +170,18 @@ font-weight: 400;
 line-height: 29px;
 text-align: left;
 }
-.rating{
+.stars{
+    display: inline-block;
+}
+
+.star{
+    font-size: 40px;
     color: white;
-    width: 30%;
-    height: 34px;
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
+    cursor: pointer;
+}
+
+.star.selected{
+    color: gold;
 }
 .button{
     display: flex;

@@ -22,22 +22,6 @@ urlArr.forEach((item) => {
     images.appendChild(imageEl);
 });
     
-
-
-// let rating = document.querySelector('.rating');
-        
-// for(let i = 0; i<3;i++){
-//     let starEl1 = document.createElement('img');
-//     starEl1.setAttribute('src', 'images/star1.png');
-//     starEl1.setAttribute('style', 'margin-right:20px');
-//     rating.appendChild(starEl1);
-// }
-// for(let i = 0; i<2;i++){
-//     let starEl2 = document.createElement('img');
-//     starEl2.setAttribute('src', 'images/star2.png');
-//     starEl2.setAttribute('style', 'margin-right:20px');
-//     rating.appendChild(starEl2);
-// }
     
    
 //Date
@@ -53,38 +37,25 @@ topContent.appendChild(date);
 
 
 //Rating Stars
-let star1 = document.querySelector('.star1');
-let star2 = document.querySelector('.star2');
-let star3 = document.querySelector('.star3');
-let star4 = document.querySelector('.star4');
-let star5 = document.querySelector('.star5');
 
-star1.onclick = function(){
-    star1.style.color = 'yellow';
-}
+const stars = document.querySelectorAll('.star');
+let currentRating = 0;  
 
-star2.onclick = function(){
-    star1.style.color = 'yellow';
-    star2.style.color = 'yellow';
-}
 
-star3.onclick = function(){
-    star1.style.color = 'yellow';
-    star2.style.color = 'yellow';
-    star3.style.color = 'yellow';
-}
+stars.forEach(star => {
+    star.addEventListener('click', function() {
+        currentRating = this.getAttribute('data-value');
+        updateStars(currentRating);
+    });
 
-star4.onclick = function(){
-    star1.style.color = 'yellow';
-    star2.style.color = 'yellow';
-    star3.style.color = 'yellow';
-    star4.style.color = 'yellow';
-}
+});
 
-star5.onclick = function(){
-    star1.style.color = 'yellow';
-    star2.style.color = 'yellow';
-    star3.style.color = 'yellow';
-    star4.style.color = 'yellow';
-    star5.style.color = 'yellow';
+function updateStars(rating) {
+    stars.forEach(star => {
+        if (star.getAttribute('data-value') <= rating) {
+            star.classList.add('selected');
+        } else {
+            star.classList.remove('selected');
+        }
+    });
 }
