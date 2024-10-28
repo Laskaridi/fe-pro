@@ -14,16 +14,8 @@ genresStyle.setAttribute('style', 'display:flex;');
 
 
 
+//Slider
 
-// urlArr = ['images/video1.png', 'images/video2.png', 'images/video3.png', 'images/video4.png', 'images/video5.png']
-
-// let images = document.querySelector('.images');
-
-// urlArr.forEach((item) => {
-//     let imageEl = document.createElement('img');
-//     imageEl.setAttribute('src', item);
-//     images.appendChild(imageEl);
-// });
 const slides = document.querySelector('.slides');
 const slide = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.icon1');
@@ -57,11 +49,11 @@ nextBtn.addEventListener('click', function() {
 
 let topContent = document.querySelector('.top-left');
 let date = document.createElement('h3');
-date.innerHTML= '12 October 2024';
+const today = new Date();
+const options = {year:'numeric', month:'long', day:'numeric'};
+const formatDate = today.toLocaleDateString('en-UA', options);
+date.textContent = formatDate;
 topContent.appendChild(date);
-
-
-
 
 
 
