@@ -23,7 +23,7 @@ enterButton.addEventListener('click', function() {
         return;
     }
 
-    todoList.push({ text: todoText, completed: false });
+    todoList.push({ text: todoText});
     saveTodos();
     todoInput.value = "";
     renderTodos();
@@ -37,16 +37,6 @@ function renderTodos() {
         const todoItem = document.createElement("li");
         todoItem.setAttribute('class', 'list-group-item');
         todoItem.textContent = item.text;
-
-        if (item.completed) {
-            todoItem.classList.add("completed");
-        }
-
-        todoItem.addEventListener("click", function () {
-            todoList[index].completed = !todoList[index].completed;
-            saveTodos();
-            renderTodos();
-        });
 
         const deleteButton = document.createElement("i");
         deleteButton.classList.add('fa-solid', 'fa-trash', 'remove');
