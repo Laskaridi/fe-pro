@@ -55,10 +55,9 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
         users.forEach(user => {
            const listItem = document.createElement('li');
-           listItem.setAttribute('class', 'list-group-item');
+           listItem.classList.add('list-group-item', 'border')
            listItem.style.width = '500px';
            listItem.style.minHeight = '40px';
-           listItem.style.border = '1px solid gray';
             listItem.textContent = `Користувач: ${user.name}, email: ${user.email}`;
             userList.appendChild(listItem);
         });
@@ -75,10 +74,9 @@ document.querySelector('#planets').addEventListener('click', () => {
 
         data.results.forEach(planet => {
             const card = document.createElement('li');
-            card.setAttribute('class', 'list-group-item');
+            card.classList.add('list-group-item', 'border')
             card.style.width = '300px';
             card.style.minHeight = '40px';
-            card.style.border = '1px solid gray';
             card.style.paddingLeft = '10px';
             card.style.marginLeft = '100px';
             card.dataset.id = planet.url.match(/(\d+)\/$/)[1];
