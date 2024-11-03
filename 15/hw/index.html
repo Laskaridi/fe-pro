@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #my-canvas{
+            display: block;
+            border: 1px solid gray;
+            margin: 20px auto;
+        }
+        h2{
+            margin: 50px 120px 0;
+        }
+        .trend-movies-container {
+            display: flex;
+            justify-content: flex-start;
+            column-gap: 100px;
+            flex-wrap: wrap;
+            margin: 20px 100px 150px;
+        }  
+    </style>
+</head>
+<body>
+    <canvas id="my-canvas" width="400" height="400"></canvas>
+
+    
+    <div class="svg-container"></div>
+
+
+    <h2>Список трендових фільмів</h2> 
+    <div class="trend-movies-container">
+    <div class="trend-movies"></div>
+    </div>
+
+
+    <script type="module" src="script/main.js"></script>  
+</body>
+</html>
