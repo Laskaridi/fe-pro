@@ -1,0 +1,10 @@
+.custom{
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    margin-left: 50px;
+}
+.custom:hover{
+    color: black;
+    background-color: gray;
+}
