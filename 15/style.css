@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+.slider-container {
+    position: relative;
+    perspective: 1000px;
+    width: 250px;
+    height:300px;
+}
+.img{
+    width:87%;
+    height: 100%;
+    margin: 0 auto;
+}
+.cube {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.cube-face {
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #fff;
+}
+.front { transform: rotateY(0deg) translateZ(150px); background: #FF5733; }
+.back { transform: rotateY(180deg) translateZ(150px); background: #33B5FF; }
+.left { transform: rotateY(-90deg) translateZ(150px); background: #9B33FF; }
+.right { transform: rotateY(90deg) translateZ(150px); background: #33FF57; }
+.top { transform: rotateX(90deg) translateZ(150px); background: #FF33A1; }
+.bottom { transform: rotateX(-90deg) translateZ(150px); background: #FFA533; }
+
+.navigation {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-button {
+    width: 50%;
+    background-color: rgba(143 143 143);
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.nav-button:focus {
+    outline: none;
+}
+
+
+
+
+/* Контейнер для книги */
+.book-container {
+    position: relative;
+    width: 150px;
+    height: 200px;
+}
+
+/* Книга */
+.book {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #8B4513;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Інформація про книгу */
+.book-info {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 20px); /* Початкова позиція (прихована) */
+    width: 140px;
+    padding: 10px;
+    color: black;
+    font-size: 14px;
+    border: none;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Плавне з’явлення */
+    text-align: center;
+    pointer-events: none; /* Забороняємо взаємодію */
+}
+
+/* Показ інформації при наведенні */
+.book-container:hover .book-info {
+    opacity: 1;
+    transform: translate(-50%, -20px); /* Піднімаємо інформацію вгору */
+}

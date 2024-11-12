@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body, html {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #my-canvas {
+            border: 1px solid #000;
+        } */
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slider-container">
+        <div class="cube" id="cube">
+            <div class="cube-face front"><img src="images/book1.png" class="img"></div>
+            <div class="cube-face back"><img src="images/book2.png" class="img"></div>
+            <div class="cube-face left"><img src="images/book3.png" class="img"></div>
+            <div class="cube-face right"><img src="images/book4.png" class="img"></div>
+            <div class="cube-face top"><img src="images/book5.png" class="img"></div>
+            <div class="cube-face bottom"><img src="images/book1.png" class="img"></div>
+        </div>
+    
+        <div class="navigation">
+            <button class="nav-button" onclick="rotateCube(-1)">previous</button>
+            <button class="nav-button" onclick="rotateCube(1)">next</button>
+        </div>
+    </div>
+
+
+
+    <div class="book-container">
+        <div class="book"><img src="images/book3.png" class="img"></div>
+        <!-- Інформація про книгу -->
+        <div class="book-info">
+            <p><strong>Назва:</strong> Моя книга</p>
+            <p><strong>Автор:</strong> Автор книги</p>
+            <p><strong>Опис:</strong> Це цікава книга про JavaScript і CSS.</p>
+        </div>
+    </div>
+
+
+<script src="slider.js"></script>
+    <!-- <script src="canvas-books.js"></script> -->
+</body>
+</html>
